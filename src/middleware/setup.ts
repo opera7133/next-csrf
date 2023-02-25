@@ -10,13 +10,10 @@ import { sign } from "cookie-signature";
 import { serialize } from "cookie";
 import { getSecret } from "../utils/get-secret";
 
-type SetupArgs =
-  | NextApiRequest[]
-  | NextApiResponse[]
-  | GetServerSidePropsContext[];
+type SetupArgs = any;
 
 const setup = (
-  handler: NextApiHandler,
+  handler: any,
   { secret, tokenKey, cookieOptions }: SetupMiddlewareArgs
 ) => async (...args: SetupArgs): Promise<void> => {
   const isApi = args.length > 1;
