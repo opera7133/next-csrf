@@ -20,7 +20,7 @@ const defaultOptions = {
 type Middleware = (handler: NextApiHandler) => void;
 
 type NextCSRF = {
-  setup: Middleware;
+  setup: any;
   csrf: Middleware;
 };
 
