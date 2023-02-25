@@ -46,7 +46,7 @@ const setup = (
     serialize(tokenKey, token, cookieOptions),
   ]);
 
-  return handler(req as NextApiRequest, res as NextApiResponse);
+  return handler(...args);
 };
 
 export { setup };
