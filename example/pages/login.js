@@ -35,7 +35,7 @@ function Login() {
   );
 }
 
-export const getServerSideProps = setup(async ({ req, res }) => {
+export const getServerSideProps = setup(async (ctx) => {
   return { props: {} };
 });
 
