@@ -103,7 +103,7 @@ function Login() {
 }
 
 // Here's the important part. `setup` saves the necesary secret and token.
-export const getServerSideProps = setup(async ({req, res}) => {
+export const getServerSideProps = setup(async (ctx) => {
     return { props: {}}
 });
 
